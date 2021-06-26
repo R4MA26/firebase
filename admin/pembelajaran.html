@@ -180,6 +180,22 @@
                                 </li>
                             </ul>
                         </li>
+                         <!-- Jadwal -->
+                        </li>
+                           <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false"><i
+                                    class="mr-2 fas fa-users"></i><span class="hide-menu">Jadwal</span></a>
+                            <ul aria-expanded="false" class="collapse first-level base-level-line">
+                                <li class="sidebar-item"><a href="pembelajaran.html" class="sidebar-link"><span class="hide-menu"> Jadwal Pembelajaran
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="membersihkan.html" class="sidebar-link"><span class="hide-menu"> Jadwal Membersihkan
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="nginap-2.html" class="sidebar-link"><span class="hide-menu"> Jadwal Nginap
+                                        </span></a>
+                                </li>
+                            </ul>
+                        </li>
                         <li class="sidebar-item">
                             <a class="sidebar-link" href="inventaris.html" aria-expanded="false"><i class="icon-user"></i><span
                                     class="hide-menu">Inventaris</span></a>
@@ -211,7 +227,7 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 align-self-center">
-                        <h3 class="page-title text-truncate text-dark font-weight-medium mb-1">Data Pembelajaran Program</h3>
+                        <h3 class="page-title text-truncate text-dark font-weight-medium mb-1">Data Jadwal Pembelajaran</h3>
                     </div>
                 </div>
             </div>
@@ -223,15 +239,18 @@
                         <div class="card">
                             <div class="card-body overflow-auto">
                                 <button class="btn btn-sm waves-effect waves-light btn-rounded btn-primary mb-3"
-                                    data-toggle="modal" data-target="#bs-example-modal-lg">Tambah Data Pemateri</button>
+                                    data-toggle="modal" data-target="#bs-example-modal-lg">Tambah Data Pembelajaran</button>
                                 <table id="example" class="table table-striped" class="responsive display nowrap"
                                     cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>No</th>
-                                            <th>Nama Pemateri</th>
-                                            <th>Hari</th>
-                                            <th>Foto</th>
+                                            <th>Senin</th>
+                                            <th>Selasa</th>
+                                            <th>Rabu</th>
+                                            <th>Kamis</th>
+                                            <th>Jumat</th>
+                                            <th>Sabtu</th>
+                                            <th>Minggu</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -252,10 +271,13 @@
                                 <table id="example2" class="table table-striped" class="responsive display nowrap" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>No</th>
-                                            <th>Nama Peserta</th>
-                                            <th>No. registrasi</th>
-                                            <th>Action</th>
+                                            <th>Senin</th>
+                                            <th>Selasa</th>
+                                            <th>Rabu</th>
+                                            <th>Kamis</th>
+                                            <th>Jumat</th>
+                                            <th>Sabtu</th>
+                                            <th>Minggu</th>
                                         </tr>
                                     </thead>
                                     <tbody id="table-peserta">
@@ -298,34 +320,38 @@
                 <div class="modal-body">
                     <form id="form-pemateri" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label>Nama Pemateri</label>
-                            <input type="text" class="form-control" id="nama-program" aria-describedby="emailHelp">
+                            <label>Senin</label>
+                            <input type="text" class="form-control" id="senin" aria-describedby="emailHelp">
                         </div>
                         <div class="form-group">
-                            <label>Hari</label>
-                            <select class="form-control" id="hari-program">
-                                <option>Pilih...</option>
-                                <option value="Senin">Senin</option>
-                                <option value="Selasa">Selasa</option>
-                                <option value="Rabu">Rabu</option>
-                                <option value="Kamis">Kamis</option>
-                                <option value="Jumat">Jumat</option>
-                                <option value="Sabtu">Sabtu</option>
-                            </select>
+                            <label>Selasa</label>
+                            <input type="text" class="form-control" id="selasa" aria-describedby="emailHelp">
                         </div>
                         <div class="form-group">
-                            <label>Foto</label>
-                            <div class="input-group">
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="gambar-pemateri" accept="image/*">
-                                    <label class="custom-file-label" for="gambar-pemateri">Choose file</label>
-                                </div>
-                            </div>
+                            <label>Rabu</label>
+                            <input type="text" class="form-control" id="rabu" aria-describedby="emailHelp">
                         </div>
+                        <div class="form-group">
+                            <label>Kamis</label>
+                            <input type="text" class="form-control" id="kamis" aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group">
+                            <label>Jumat</label>
+                            <input type="text" class="form-control" id="jumat" aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group">
+                            <label>Sabtu</label>
+                            <input type="text" class="form-control" id="sabtu" aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group">
+                            <label>Minggu</label>
+                            <input type="text" class="form-control" id="minggu" aria-describedby="emailHelp">
+                        </div>
+                                            
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary" id="insert">Submit</button>
                     </form>
                 </div>
             </div><!-- /.modal-content -->
@@ -458,11 +484,61 @@
 
 
     <!-- The core Firebase JS SDK is always required and must be listed first !Harus Didefinisikan semua 4-->
-    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-storage.js"></script>
-    <script src="firebase/firebase-program.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-database.js"></script>
+    <scri src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></scri>
+    <scri src="https://www.gstatic.com/firebasejs/8.2.4/firebase-storage.js"></scri>
+    <script src="firebase/firebase-pembelajaran.js"></script> -->
+
+    <!-- Rama-firebase -->
+    <!-- Firebase Libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-database.js"></script> 
+
+    <!-- Rama-firebase -->
+    <script id="MainScript">
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyD8E6YYoIcZByQ4qnTOgufCAV2PbkfNEzY",
+            authDomain: "papan-info-kedai-1296c.firebaseapp.com",
+            databaseURL: "https://papan-info-kedai-1296c-default-rtdb.firebaseio.com",
+            projectId: "papan-info-kedai-1296c",
+            storageBucket: "papan-info-kedai-1296c.appspot.com",
+            messagingSenderId: "488943574446",
+            appId: "1:488943574446:web:762068121a10bc61193c3f"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        // Ambil Data
+        var seninV, selasaV, rabuV, kamisV, jumatV, sabtuV, mingguV;
+
+        function Ready() {
+            seninV = document.getElementById('senin').value;
+            selasaV = document.getElementById('selasa').value;
+            rabuV = document.getElementById('rabu').value;
+            kamisV = document.getElementById('kamis').value;
+            jumatV = document.getElementById('jumat').value;
+            sabtuV = document.getElementById('sabtu').value;
+            mingguV = document.getElementById('minggu').value;
+        }
+        // insert data
+        document.getElementById('insert').onclick = function(){
+            Ready();
+            firebase.database().ref('jadwal/'+seninV).set({
+                Senin: seninV,
+                Selasa: selasaV,
+                Rabu: rabuV,
+                Kamis: kamisV,
+                Jumat: jumatV,
+                Sabtu: sabtuV,
+                Minggu: mingguV
+            });
+        }
+
+        
+
+    </script>
 
     <!-- SCRIPT JS UNTUK MEMBLOK INPUTAN SELAIN ANGKA -->
     <script type="text/javascript">

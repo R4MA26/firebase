@@ -19,7 +19,7 @@ if (hariini == "Senin") {
     
     //membuat variabel untuk passing data
     var view_materi_pembelajaran = document.getElementById("view-materi-pembelajaran");
-    document.getElementById("view-materi-pembelajaran").innerHTML = "Program";  
+    document.getElementById("view-materi-pembelajaran").innerHTML = "Multimedia";  
 
     pemateriprogramRef.on("value", dataBerhasilpemateri, dataGagalpemateri);
     //membuat variabel untuk passing data
@@ -71,7 +71,7 @@ if (hariini == "Senin") {
 else if(hariini == "Selasa"){
     //membuat variabel untuk passing data
     var view_materi_pembelajaran = document.getElementById("view-materi-pembelajaran");
-    document.getElementById("view-materi-pembelajaran").innerHTML = "Multimedia";
+    document.getElementById("view-materi-pembelajaran").innerHTML = "Program";
 
     pematerimulmedRef.on("value", dataBerhasilpemateri, dataGagalpemateri);
     //membuat variabel untuk passing data
