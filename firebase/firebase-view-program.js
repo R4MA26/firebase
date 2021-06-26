@@ -68,7 +68,7 @@ if (hariini == "Rabu") {
     }
 
 } 
-else if(hariini == "Minggu"){
+else if(hariini == "Senin"){
     //membuat variabel untuk passing data
     var view_materi_pembelajaran = document.getElementById("view-materi-pembelajaran");
     document.getElementById("view-materi-pembelajaran").innerHTML = "Multimedia";
