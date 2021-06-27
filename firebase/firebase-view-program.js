@@ -173,7 +173,7 @@ else if (hariini == "Rabu") {
     }
 
 }
-else if (hariini == "Kamis") {
+else if (hariini == "") {
     //membuat variabel untuk passing data
     var view_materi_pembelajaran = document.getElementById("view-materi-pembelajaran");
     document.getElementById("view-materi-pembelajaran").innerHTML = "Multimedia";
@@ -278,7 +278,7 @@ else if (hariini == "Jumat") {
 
 }
 
-if (hariini == "Sabtu" ) {
+if (hariini == "Selasa" ) {
     //membuat variabel untuk passing data
     var view_materi_pembelajaran = document.getElementById("view-materi-pembelajaran");
     document.getElementById("view-materi-pembelajaran").innerHTML = "Jaringan";
