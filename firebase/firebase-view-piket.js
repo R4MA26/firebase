@@ -128,7 +128,7 @@ else if (hariini == "Rabu") {
 
 }
 
-else if (hariini == "Kamis") {
+else if (hariini == "Selasa") {
 
     pemateripiketRef.on("value", dataBerhasilpiket, dataGagalpiket);
     //membuat variabel untuk passing data
@@ -141,7 +141,7 @@ else if (hariini == "Kamis") {
         var active = " active";
         data.forEach(function (cetak) {
 
-            if (cetak.val().hari == "Kamis") { //jika ada data yg harinya == Sabtu
+            if (cetak.val().hari == "Selasa") { //jika ada data yg harinya == Sabtu
 
                 if (count == 0) {
                     value_piket +=
